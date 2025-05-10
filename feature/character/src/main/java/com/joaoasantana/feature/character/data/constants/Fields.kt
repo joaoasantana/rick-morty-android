@@ -1,0 +1,9 @@
+package com.joaoasantana.feature.character.data.constants
+
+const val ID = "id"
+const val NAME = "name"
+const val STATUS = "status"
+const val SPECIES = "species"
+const val TYPE = "type"
+const val GENDER = "gender"
+const val IMAGE = "image"
