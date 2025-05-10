@@ -3,13 +3,13 @@ package com.joaoasantana.feature.character.data.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.joaoasantana.feature.character.data.constants.GENDER
-import com.joaoasantana.feature.character.data.constants.IMAGE
-import com.joaoasantana.feature.character.data.constants.NAME
-import com.joaoasantana.feature.character.data.constants.PAGE
-import com.joaoasantana.feature.character.data.constants.SPECIES
-import com.joaoasantana.feature.character.data.constants.STATUS
-import com.joaoasantana.feature.character.data.constants.TYPE
+import com.joaoasantana.core.common.constants.GENDER
+import com.joaoasantana.core.common.constants.IMAGE
+import com.joaoasantana.core.common.constants.NAME
+import com.joaoasantana.core.common.constants.PAGE
+import com.joaoasantana.core.common.constants.SPECIES
+import com.joaoasantana.core.common.constants.STATUS
+import com.joaoasantana.core.common.constants.TYPE
 
 private const val TABLE_NAME = "character"
 

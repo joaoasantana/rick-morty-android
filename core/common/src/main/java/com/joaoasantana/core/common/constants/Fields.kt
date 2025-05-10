@@ -1,4 +1,4 @@
-package com.joaoasantana.feature.character.data.constants
+package com.joaoasantana.core.common.constants
 
 const val ID = "id"
 const val PAGE = "page"
