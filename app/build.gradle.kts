@@ -19,6 +19,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        compose = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -40,11 +44,33 @@ android {
 }
 
 dependencies {
-    // AndroidX dependencies
+    implementation(libs.activity.compose)
 
-    // Test dependencies
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network)
+
+    implementation(platform(libs.compose))
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.tooling)
+
+    implementation(libs.lifecycle.compose)
+
+    implementation(libs.navigation.compose)
+
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
+    implementation(libs.room)
+    implementation(libs.room.compiler)
+    implementation(libs.room.runtime)
+
     testImplementation(libs.junit)
 
-    // AndroidTest dependencies
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockk.android)
+
     androidTestImplementation(libs.androidx.junit)
 }
