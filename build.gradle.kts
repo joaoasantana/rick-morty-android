@@ -11,19 +11,11 @@ plugins {
 
 allprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")
-    apply(plugin = "org.jlleitschuh.gradle.ktlint")
 
     detekt {
         autoCorrect = true
         buildUponDefaultConfig = true
         config.setFrom(files("${project.rootDir}/.config/detekt/detekt.yml"))
         parallel = true
-    }
-
-    ktlint {
-        android.set(false)
-        enableExperimentalRules.set(true)
-        outputColorName.set("RED")
-        outputToConsole.set(true)
     }
 }
