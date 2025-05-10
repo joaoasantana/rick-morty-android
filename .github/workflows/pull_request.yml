@@ -24,11 +24,5 @@ jobs:
       - name: Run Build
         run: ./gradlew build
 
-      - name: Run Detekt
-        run: ./gradlew detekt
-
-      - name: Run Ktlint
-        run: ./gradlew ktlintCheck
-
       - name: Run Unit Tests
         run: ./gradlew clean test

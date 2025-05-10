@@ -6,12 +6,43 @@ kotlin = "2.1.20"
 detekt = "1.23.8"
 ktlint = "12.2.0"
 
+activity = "1.10.1"
+coil = "3.1.0"
+compose = "2025.05.00"
+lifecycle = "2.9.0"
+navigation = "2.9.0"
+okhttp = "4.12.0"
+retrofit = "2.11.0"
+
 junit = "4.13.2"
+mockk = "1.14.2"
 
 androidx_junit = "1.2.1"
 
 [libraries]
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity" }
+
+coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
+
+compose = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
+compose-ui = { group = "androidx.compose.ui", name = "ui"}
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+
+navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+mockk-android = { group = "io.mockk", name = "mockk-android", version.ref = "mockk" }
 
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx_junit" }
 
@@ -19,8 +50,8 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "a
 android-application = { id = "com.android.application", version.ref = "agp" }
 
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
-

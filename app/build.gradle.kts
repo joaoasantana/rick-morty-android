@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
 
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
 }
 
@@ -17,6 +18,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        compose = true
     }
 
     buildTypes {
@@ -40,11 +45,29 @@ android {
 }
 
 dependencies {
-    // AndroidX dependencies
+    implementation(libs.activity.compose)
 
-    // Test dependencies
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network)
+
+    implementation(platform(libs.compose))
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.tooling)
+
+    implementation(libs.lifecycle.compose)
+
+    implementation(libs.navigation.compose)
+
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+
     testImplementation(libs.junit)
 
-    // AndroidTest dependencies
+    testImplementation(libs.mockk)
+    testImplementation(libs.mockk.android)
+
     androidTestImplementation(libs.androidx.junit)
 }
