@@ -1,3 +1,7 @@
+rootProject.name = "Rick and Morty"
+
+include(":app")
+
 pluginManagement {
     repositories {
         google {
@@ -19,8 +23,3 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-rootProject.name = "Rick and Morty"
-
-include(":app")
- 
