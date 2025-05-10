@@ -9,4 +9,3 @@ data class CharacterResponse(
     val gender: String,
     val image: String,
 )
-
