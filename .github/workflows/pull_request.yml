@@ -1,0 +1,34 @@
+name: Check PR
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: SetupSDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Grant permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run Build
+        run: ./gradlew build
+
+      - name: Run Detekt
+        run: ./gradlew detekt
+
+      - name: Run Ktlint
+        run: ./gradlew ktlintCheck
+
+      - name: Run Unit Tests
+        run: ./gradlew clean test
