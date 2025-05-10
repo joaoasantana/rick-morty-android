@@ -11,6 +11,9 @@ interface CharacterStorage {
     @Insert
     suspend fun insert(vararg characters: CharacterEntity)
 
-    @Query("SELECT * FROM character")
+    @Query("SELECT * FROM character WHERE id = :id LIMIT 1")
+    suspend fun findById(id: Int): CharacterEntity
+
+    @Query("SELECT * FROM character WHERE page = :page")
     suspend fun findByPage(page: Int): List<CharacterEntity>
 }
