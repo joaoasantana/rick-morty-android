@@ -9,6 +9,7 @@ ktlint = "12.2.0"
 activity = "1.10.1"
 coil = "3.1.0"
 compose = "2025.05.00"
+koin = "3.4.0"
 lifecycle = "2.9.0"
 navigation = "2.9.0"
 okhttp = "4.12.0"
@@ -28,6 +29,10 @@ coil-network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", versi
 compose = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
 compose-material = { group = "androidx.compose.material3", name = "material3" }
 compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+
+koin = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
 
 lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 

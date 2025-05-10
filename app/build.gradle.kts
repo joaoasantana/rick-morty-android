@@ -54,6 +54,10 @@ dependencies {
     implementation(libs.compose.material)
     implementation(libs.compose.preview)
 
+    implementation(libs.koin)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+
     implementation(libs.lifecycle.compose)
 
     implementation(libs.navigation.compose)
