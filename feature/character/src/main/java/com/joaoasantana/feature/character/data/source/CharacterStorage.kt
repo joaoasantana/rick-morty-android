@@ -9,7 +9,7 @@ import com.joaoasantana.feature.character.data.model.CharacterEntity
 interface CharacterStorage {
 
     @Insert
-    suspend fun insert(vararg characters: CharacterEntity)
+    suspend fun insert(data: List<CharacterEntity>)
 
     @Query("SELECT * FROM character WHERE id = :id LIMIT 1")
     suspend fun findById(id: Int): CharacterEntity
