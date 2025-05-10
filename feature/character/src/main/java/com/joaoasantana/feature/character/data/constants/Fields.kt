@@ -1,6 +1,7 @@
 package com.joaoasantana.feature.character.data.constants
 
 const val ID = "id"
+const val PAGE = "page"
 const val NAME = "name"
 const val STATUS = "status"
 const val SPECIES = "species"
