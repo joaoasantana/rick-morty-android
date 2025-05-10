@@ -26,8 +26,8 @@ coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref 
 coil-network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 
 compose = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
-compose-ui = { group = "androidx.compose.ui", name = "ui"}
-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-material = { group = "androidx.compose.material3", name = "material3" }
+compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 
 lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 

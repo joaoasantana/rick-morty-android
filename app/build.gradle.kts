@@ -51,8 +51,8 @@ dependencies {
     implementation(libs.coil.network)
 
     implementation(platform(libs.compose))
-    implementation(libs.compose.ui)
-    implementation(libs.compose.ui.tooling)
+    implementation(libs.compose.material)
+    implementation(libs.compose.preview)
 
     implementation(libs.lifecycle.compose)
 
