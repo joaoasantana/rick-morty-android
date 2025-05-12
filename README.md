@@ -3,6 +3,8 @@
 App para listagem de personagens de Rick and Morty. \
 Api publica -> https://rickandmortyapi.com/
 
+Para esse projeto usei o github actions para CI/CD e git flow.
+
 Foi usado as seguintes dependencias: \
   . coil \
   . compose \
