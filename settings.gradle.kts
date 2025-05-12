@@ -2,6 +2,9 @@ rootProject.name = "Rick and Morty"
 
 include(":app")
 
+include(":core:common")
+include(":feature:character")
+
 pluginManagement {
     repositories {
         google {
