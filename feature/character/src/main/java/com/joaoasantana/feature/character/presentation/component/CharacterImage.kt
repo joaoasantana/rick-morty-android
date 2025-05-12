@@ -23,7 +23,7 @@ fun CharacterImage(character: CharacterModel) {
 
     AsyncImage(
         model = imageRequest,
-        contentDescription = null,
+        contentDescription = character.name,
         contentScale = ContentScale.Crop,
         modifier = Modifier
             .padding(8.dp)
