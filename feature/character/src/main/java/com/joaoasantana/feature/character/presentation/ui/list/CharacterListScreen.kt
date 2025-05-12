@@ -11,7 +11,6 @@ import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
@@ -23,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.joaoasantana.feature.character.presentation.component.CharacterImage
 import com.joaoasantana.feature.character.presentation.component.CharacterResource
-import com.joaoasantana.feature.character.presentation.mapper.toModel
 import com.joaoasantana.feature.character.presentation.model.CharacterModel
 import org.koin.androidx.compose.koinViewModel
 
@@ -50,7 +48,7 @@ fun CharacterListScreen(
         val currentState = state.value
 
         if (currentState is CharacterListState.Loaded) {
-            modelList.addAll(currentState.characters.map { it.toModel() })
+            modelList.addAll(currentState.characters)
         }
     }
 
