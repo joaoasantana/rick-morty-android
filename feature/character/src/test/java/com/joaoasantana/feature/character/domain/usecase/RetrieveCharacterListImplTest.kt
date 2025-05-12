@@ -40,27 +40,29 @@ class RetrieveCharacterListImplTest {
 
     @Test
     fun `should return success response when repository returns success`() = runBlocking {
+        val page = 1
         val expected = Response.Success<List<Character>>(mockk())
 
-        every { characterRepository.getCharacterList() } returns flowOf(expected)
+        every { characterRepository.getCharacterList(any()) } returns flowOf(expected)
 
-        val response = retrieveCharacterList().first()
+        val response = retrieveCharacterList(page).first()
 
         Assert.assertEquals(expected, response)
 
-        verify { characterRepository.getCharacterList() }
+        verify { characterRepository.getCharacterList(page) }
     }
 
     @Test
     fun `should return failure response when repository returns failure`() = runBlocking {
+        val page = 1
         val expected = Response.Failure<List<Character>>(mockk())
 
-        every { characterRepository.getCharacterList() } returns flowOf(expected)
+        every { characterRepository.getCharacterList(any()) } returns flowOf(expected)
 
-        val response = retrieveCharacterList().first()
+        val response = retrieveCharacterList(page).first()
 
         Assert.assertEquals(expected, response)
 
-        verify { characterRepository.getCharacterList() }
+        verify { characterRepository.getCharacterList(page) }
     }
 }

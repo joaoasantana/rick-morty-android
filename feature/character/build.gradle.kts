@@ -65,6 +65,9 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
 
+    implementation(libs.room)
+    implementation(libs.room.ktx)
+
     testImplementation(libs.junit)
 
     testImplementation(libs.mockk)

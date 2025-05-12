@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOn
 
 fun interface RetrieveCharacterList {
-    operator fun invoke(): Flow<Response<List<Character>>>
+    operator fun invoke(page: Int): Flow<Response<List<Character>>>
 }
 
 class RetrieveCharacterListImpl(
@@ -17,7 +17,7 @@ class RetrieveCharacterListImpl(
     private val coroutineDispatcher: CoroutineDispatcher = Dispatchers.IO,
 ) : RetrieveCharacterList {
 
-    override operator fun invoke(): Flow<Response<List<Character>>> {
-        return characterRepository.getCharacterList().flowOn(coroutineDispatcher)
+    override operator fun invoke(page: Int): Flow<Response<List<Character>>> {
+        return characterRepository.getCharacterList(page).flowOn(coroutineDispatcher)
     }
 }
