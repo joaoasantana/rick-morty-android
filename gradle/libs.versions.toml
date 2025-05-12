@@ -31,6 +31,8 @@ coil-network = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", versi
 compose = { group = "androidx.compose", name = "compose-bom", version.ref = "compose" }
 compose-material = { group = "androidx.compose.material3", name = "material3" }
 compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+compose-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
 koin = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
 koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }

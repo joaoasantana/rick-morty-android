@@ -56,12 +56,16 @@ dependencies {
     implementation(libs.coil.network)
 
     implementation(platform(libs.compose))
+    androidTestImplementation(platform(libs.compose))
     implementation(libs.compose.material)
     implementation(libs.compose.preview)
+    androidTestImplementation(libs.compose.test)
+    debugImplementation(libs.compose.test.manifest)
 
     implementation(libs.koin)
     implementation(libs.koin.android)
     implementation(libs.koin.compose)
+    testImplementation(libs.koin.test)
 
     implementation(libs.lifecycle.compose)
 
@@ -81,6 +85,4 @@ dependencies {
 
     testImplementation(libs.mockk)
     testImplementation(libs.mockk.android)
-
-    androidTestImplementation(libs.androidx.junit)
 }
